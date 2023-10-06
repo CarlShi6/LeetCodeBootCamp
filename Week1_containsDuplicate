@@ -1,1 +1,12 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        count = {}
+        mul = False
 
+        for item in nums:
+            if item in count.keys():
+                mul = True
+            elif item not in count.keys():
+                count[item] = 1
+
+        return mul
